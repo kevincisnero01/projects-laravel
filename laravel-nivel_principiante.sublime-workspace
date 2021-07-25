@@ -3,6 +3,10 @@
 	{
 		"selected_items":
 		[
+			[
+				"for",
+				"foreach"
+			]
 		]
 	},
 	"buffers":
@@ -52,17 +56,15 @@
 	},
 	"expanded_folders":
 	[
-		"/C/laragon/www/app",
-		"/C/laragon/www/app/resources",
-		"/C/laragon/www/app/resources/views"
+		"/C/laragon/www/app"
 	],
 	"file_history":
 	[
 		"/C/laragon/www/app/routes/web.php",
+		"/C/laragon/www/app/resources/views/portfolio.blade.php",
 		"/D/Sistema/Editores/sublime_text_4_x64_custom/Data/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
 		"/C/laragon/www/app/resources/views/about.blade.php",
 		"/C/laragon/www/app/resources/views/contact.blade.php",
-		"/C/laragon/www/app/resources/views/portfolio.blade.php",
 		"/C/laragon/www/app/resources/views/layout.blade.php",
 		"/C/laragon/www/app/resources/views/home.blade.php",
 		"/D/Sistema/Editores/sublime_text_4_x64_custom/Data/Packages/AdvancedNewFile/README.md",
@@ -85,6 +87,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"small",
 			"Portfolio",
 			"variables",
 			"'contacto'",
@@ -193,7 +196,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 281.0,
+	"side_bar_width": 221.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
