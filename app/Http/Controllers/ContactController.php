@@ -11,6 +11,8 @@ class ContactController extends Controller
             'email' => 'required|email',
             'subject' => 'required',
             'content' => 'required|min:3'
+        ],[
+            "name.required" => "Es obligatorio ingresar este campo"
         ]);
 
         return 'Datos Validados';
