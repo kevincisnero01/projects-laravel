@@ -10,6 +10,7 @@
 		@empty
 			<li>No hay elementos</li>
 		@endforelse
+		{{ $projects->links() }}
 	</ul>
 
 @endsection

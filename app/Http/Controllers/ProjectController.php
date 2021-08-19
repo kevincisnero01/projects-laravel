@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
-use DB;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -14,8 +14,8 @@ class ProjectController extends Controller
      */
     public function index(Request $request)
     {
-         $projects = DB::table('projects')->get();
-
-        return view('projects', compact('projects'));
+        return view('projects', [
+            'projects' => Project::latest()->paginate()
+        ]);
     }
 }
