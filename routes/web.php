@@ -5,10 +5,11 @@ use App\Http\Controllers\ContactController;
 
 Route::view('/', 'home')->name('home');
 
-Route::view('/about', 'about')->name('about');
+Route::view('/quienes-somos', 'about')->name('about');
 
-Route::get('/projects', [ProjectController::class,'index'])->name('projects');
+Route::get('/proyectos', [ProjectController::class,'index'])->name('projects.index');
+Route::get('/proyectos/{project_id}', [ProjectController::class,'show'])->name('projects.show');
 
-Route::view('/contact', 'contact')->name('contact');
+Route::view('/contacto', 'contact')->name('contact');
 
-Route::post('/contact', [ContactController::class,'store'])->name('contact.store');
+Route::post('/contacto', [ContactController::class,'store'])->name('contact.store');

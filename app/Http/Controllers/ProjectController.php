@@ -14,8 +14,16 @@ class ProjectController extends Controller
      */
     public function index(Request $request)
     {
-        return view('projects', [
+        return view('projects.index', [
             'projects' => Project::latest()->paginate()
+        ]);
+    }
+
+
+    public function show($project_id)
+    {
+        return view('projects.show', [
+            'project' => Project::findOrFail($project_id)
         ]);
     }
 }
