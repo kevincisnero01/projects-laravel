@@ -20,10 +20,10 @@ class ProjectController extends Controller
     }
 
 
-    public function show($project_id)
+    public function show(Project $project)
     {
         return view('projects.show', [
-            'project' => Project::findOrFail($project_id)
+            'project' => $project
         ]);
     }
 }

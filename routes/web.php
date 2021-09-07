@@ -8,7 +8,7 @@ Route::view('/', 'home')->name('home');
 Route::view('/quienes-somos', 'about')->name('about');
 
 Route::get('/proyectos', [ProjectController::class,'index'])->name('projects.index');
-Route::get('/proyectos/{project_id}', [ProjectController::class,'show'])->name('projects.show');
+Route::get('/proyectos/{project}', [ProjectController::class,'show'])->name('projects.show');
 
 Route::view('/contacto', 'contact')->name('contact');
 
