@@ -19,11 +19,26 @@ class ProjectController extends Controller
         ]);
     }
 
-
     public function show(Project $project)
     {
         return view('projects.show', [
             'project' => $project
         ]);
+    }
+
+    public function create()
+    {
+        return view('projects.create');
+    }
+
+    public function store()
+    {
+        Project::create([
+            'title' => request('title'),
+            'url' => request('url'),
+            'description' => request('description')
+        ]);
+        //Project::create(request->all()); //opcion 2
+        return redirect()->route('projects.index');
     }
 }
