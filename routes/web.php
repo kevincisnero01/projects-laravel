@@ -11,7 +11,8 @@ Route::get('/proyectos', [ProjectController::class,'index'])->name('projects.ind
 Route::get('/proyectos/create', [ProjectController::class,'create'])->name('projects.create');
 Route::get('/proyectos/{project}', [ProjectController::class,'show'])->name('projects.show');
 Route::post('/proyectos', [ProjectController::class,'store'])->name('projects.store');
+Route::get('/proyectos/{project}/edit', [ProjectController::class,'edit'])->name('projects.edit');
+Route::put('/proyectos/{project}', [ProjectController::class,'update'])->name('projects.update');
 
 Route::view('/contacto', 'contact')->name('contact');
-
 Route::post('/contacto', [ContactController::class,'store'])->name('contact.store');
