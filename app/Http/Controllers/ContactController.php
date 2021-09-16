@@ -16,9 +16,8 @@ class ContactController extends Controller
             'content' => 'required|min:3'
         ]);
 
-
         Mail::to('kevincisnero01@gmail.com')->send(new MessageReceived($datos));
 
-        return "Correo Enviado";
+        return back()->with('status', 'Recibimos tu correo, te responderemos en menos de 24 horas');
     }
 }
