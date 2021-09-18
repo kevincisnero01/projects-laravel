@@ -13,3 +13,5 @@ Route::resource('proyecto', ProjectController::class)
 
 Route::view('/contacto', 'contact')->name('contact');
 Route::post('/contacto', [ContactController::class,'store'])->name('contact.store');
+
+Auth::routes();

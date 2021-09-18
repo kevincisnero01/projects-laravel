@@ -2,5 +2,9 @@
 @section('title','Home')
 @section('content')
 	<h1>Home</h1>
-	<p>Hello <?php echo $nombre ?? 'Invitado'; ?>, Welcome to home </p>
+	@auth
+		<p>Hello <b>{{ Auth::user()->name }}</b>, Welcome to home</p>
+	@else
+		<p>Hello Invitado</p>
+	@endauth
 @endsection
