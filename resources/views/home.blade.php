@@ -1,10 +1,10 @@
 @extends('layout')
 @section('title','Home')
 @section('content')
-	<h1>Home</h1>
+	<h1>Inicio</h1>
 	@auth
-		<p>Hello <b>{{ Auth::user()->name }}</b>, Welcome to home</p>
+		<p>Hola <b>{{ Auth::user()->name }}</b></p>
 	@else
-		<p>Hello Invitado</p>
+		<p>Hola Invitado</p>
 	@endauth
 @endsection

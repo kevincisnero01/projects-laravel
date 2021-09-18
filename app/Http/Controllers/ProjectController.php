@@ -7,12 +7,11 @@ use App\Http\Requests\SaveProjectRequest;
 
 class ProjectController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index','show']);
+    }
+
     public function index(Request $request)
     {
         return view('projects.index', [

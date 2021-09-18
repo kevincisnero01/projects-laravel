@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title','Portfolio')
+@section('title','Proyectos')
 @section('content')
 <h1>Crear Proyecto</h1>
 
