@@ -1,8 +1,8 @@
 @extends('layout')
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="row justify-content-center py-3">
+        <div class="col-12 col-md-8 col-lg-6 bg-white shadow py-3 rounded mx-auto">
         <h1>Confirmar Contraseña</h1>
         {{ __('Please confirm your password before continuing.') }}
 
@@ -10,22 +10,21 @@
             @csrf
 
             <div class="form-group row">
-                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                <div class="col-md-6">
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                    @error('password')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-                </div>
+                <label for="password">{{ __('Password') }}</label>
+                <input type="password" class="form-control bg-light shadow-sm @error('password') is-invalid @enderror"
+                    id="password"
+                    name="password"
+                    required autocomplete="current-password">
+                @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
             </div>
 
-            <div class="form-group row mb-0">
-                <div class="col-md-8 offset-md-4">
-                    <button type="submit" class="btn btn-primary">
+            <div class="form-group row">
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">
                         {{ __('Confirm Password') }}
                     </button>
 
@@ -37,7 +36,7 @@
                 </div>
             </div>
         </form>
-        </div>
-    </div>
-</div>
+        </div><!--.col-->
+    </div><!--.row-->
+</div><!--.container-->
 @endsection

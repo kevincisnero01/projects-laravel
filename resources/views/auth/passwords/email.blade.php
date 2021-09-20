@@ -1,42 +1,36 @@
 @extends('layout')
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="row justify-content-center py-3">
+        <div class="col-12 col-md-8 col-lg-6 bg-white shadow py-3 rounded mx-auto">
             <h1>Restablecer contraseña</h1>
-
-            @if (session('status'))
-                <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
-                </div>
-            @endif
-
             <form method="POST" action="{{ route('password.email') }}">
                 @csrf
 
-                <div class="form-group row">
-                    <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                    <div class="col-md-6">
-                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                        @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
+                <div class="form-group">
+                    <label for="email">Correo</label>
+                    <input type="email" class="form-control bg-light shadow-sm @error('email') is-invalid @enderror"
+                        id="email"
+                        name="email"
+                        value="{{ old('email') }}"
+                        placeholder="Ingrese su correo electronico"
+                        required
+                        autocomplete="email"
+                        autofocus>
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
 
-                <div class="form-group row mb-0">
-                    <div class="col-md-6 offset-md-4">
-                        <button type="submit" class="btn btn-primary">
-                            {{ __('Send Password Reset Link') }}
-                        </button>
-                    </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                        Enviar enlace
+                    </button>
                 </div>
             </form>
-        </div>
-    </div>
-</div>
+        </div><!--.col-->
+    </div><!--.row-->
+</div><!--.container-->
 @endsection
