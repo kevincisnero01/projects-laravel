@@ -28,3 +28,4 @@
 </div><!--.form-group-->
 
 <button class="btn btn-primary btn-lg btn-block">{{ $btn_txt }}</button>
+<a class="btn btn-link btn-block" href="{{ route('projects.index') }}">Cancelar</a>
