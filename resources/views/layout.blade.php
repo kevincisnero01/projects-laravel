@@ -21,7 +21,7 @@
 			@include('partials.session-messages')
 		</header>
 
-		<main>
+		<main class="py-3">
 			@yield('content')
 		</main>
 
