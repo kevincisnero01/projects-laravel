@@ -5,7 +5,9 @@
     <div class="col-12 col-md-8 col-lg-6 bg-white shadow py-3 rounded mx-auto">
         <form method="POST" action="{{ route('login') }}" >
             @csrf
-            <h1>Inicio de Sesion</h1>
+
+            <h1 class="display-4">Inicio de Sesion</h1>
+            <hr>
 
             <div class="form-group row ">
                 <div class="col-md-12">
