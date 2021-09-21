@@ -12,7 +12,7 @@
 		> <span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="nav nav-pills">
+			<ul class="nav nav-pills nav-brand">
 				<li class="nav-item" >
 					<a class="nav-link {{ setActive('home') }}" href="{{ route('home') }}" > @lang('Home') </a>
 				</li>
@@ -26,7 +26,7 @@
 					<a class="nav-link {{ setActive('contact') }} "href="{{ route('contact') }}"> @lang('Contact') </a>
 				</li>
 				@auth
-					@if(Auth::user()->name == 'admin')
+					@if(Auth::user())
 					<li class="nav-item">
 						<a class="nav-link" href="{{ route('register') }}">Usuarios</a>
 					</li>

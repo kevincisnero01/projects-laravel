@@ -54,7 +54,7 @@
 
             <div class="form-group row ">
                 <div class="col-md-12 text-center">
-                    <button type="submit" class="btn btn-primary  btn-lg btn-block"> Iniciar Sesion </button>
+                    <button type="submit" class="btn btn-brand  btn-lg btn-block"> Iniciar Sesion </button>
                     @if (Route::has('password.request'))
                         <a class="btn btn-link" href="{{ route('password.request') }}"> ¿Olvidó su Contraseña? </a>
                     @endif

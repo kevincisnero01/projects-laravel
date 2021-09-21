@@ -2,6 +2,7 @@ body{
 	background-color: #f5f5f5 !important;
 }
 
+
 .h-screen{
 	height: 100vh;
 }
@@ -9,4 +10,120 @@ body{
 .active a{
 	color: red;
 	text-decoration: none;
+}
+
+
+/*===== Colores de Marca (Brand) =====
+#007bff (Azul)
+#6C63FF (Morado)
+#5b54d0 (Morado Oscuro)
+*/
+
+/*===Fondo===*/
+.bg-brand {
+  background-color: #6C63FF;
+}
+
+/*===Borde===*/
+.border-brand {
+  border-color: #6C63FF;
+}
+
+/*===Texto===*/
+.text-brand {
+    color: #6C63FF;
+}
+
+a.text-brand:hover, a.text-brand:focus {
+  color: #0056b3;
+}
+
+/*===Botones===*/
+
+.btn-brand{
+    color: #fff !important;
+    background-color: #6C63FF !important;
+    border-color: #6C63FF !important;
+}
+
+.btn-brand:hover {
+  color: #fff;
+  background-color: #5b54d0 !important;
+  border-color: #5b54d0 !important;
+}
+
+
+.btn-outline-brand {
+  color: #5b54d0 !important;
+  border-color: #6C63FF !important;
+}
+
+
+.btn-outline-brand:hover {
+  color: #fff !important;
+  background-color: #5b54d0 !important;
+  border-color: #6C63FF !important;
+}
+
+/*===Badge===*/
+.badge-brand {
+  color: #fff !important;
+  background-color: #6C63FF !important;
+}
+
+a.badge-brand:hover, a.badge-brand:focus {
+  color: #fff !important;
+  background-color: #6C63FF !important;
+}
+
+/*===Navegacion===*/
+
+.nav-brand a{
+  color: #6C63FF !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff !important;
+    background-color: #6C63FF !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff !important;
+  background-color: #6C63FF !important;
+}
+
+
+
+
+/*===Alertas===*/
+.alert-brand {
+  color: #004085 !important;
+  background-color: #6C63FF !important;
+  border-color: #6C63FF !important;
+}
+
+.alert-brand hr {
+  border-top-color: #6C63FF !important;
+}
+
+.alert-brand .alert-link {
+  color: #6C63FF !important;
+}
+
+/*===Tabla===*/
+.table-brand,
+.table-brand > th,
+.table-brand > td {
+  background-color: #6C63FF !important;
+}
+
+.table-brand th,
+.table-brand td,
+.table-brand thead th,
+.table-brand tbody + tbody {
+  border-color: #6C63FF !important;
+}
+
+.table-hover .table-brand:hover {
+  background-color: #5b54d0 !important;
 }
