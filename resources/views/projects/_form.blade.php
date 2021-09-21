@@ -27,5 +27,5 @@
 	>{{ old('description', $project->description) }}</textarea>
 </div><!--.form-group-->
 
-<button class="btn btn-primary btn-lg btn-block">{{ $btn_txt }}</button>
+<button class="btn btn-brand btn-lg btn-block">{{ $btn_txt }}</button>
 <a class="btn btn-link btn-block" href="{{ route('projects.index') }}">Cancelar</a>

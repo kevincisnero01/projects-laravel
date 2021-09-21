@@ -65,7 +65,7 @@
 				</span>
 			@enderror
 		</div><!--.form-group-->
-		<button class="btn btn-primary btn-lg btn-block" type="submit">@lang('Submit')</button>
+		<button class="btn btn-brand btn-lg btn-block" type="submit">@lang('Submit')</button>
 	</form>
 	</div><!--.col-->
 </div><!--.row-->
