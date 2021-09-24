@@ -4,6 +4,7 @@
     <div class="row justify-content-center py-3">
         <div class="col-12 col-md-8 col-lg-6 bg-white shadow py-3 rounded mx-auto">
             <h1>Restablecer contraseña</h1>
+            <hr>
             <form method="POST" action="{{ route('password.email') }}">
                 @csrf
 

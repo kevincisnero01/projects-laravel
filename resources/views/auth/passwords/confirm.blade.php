@@ -5,6 +5,7 @@
         <div class="col-12 col-md-8 col-lg-6 bg-white shadow py-3 rounded mx-auto">
         <h1>Confirmar Contraseña</h1>
         {{ __('Please confirm your password before continuing.') }}
+        <hr>
 
         <form method="POST" action="{{ route('password.confirm') }}">
             @csrf

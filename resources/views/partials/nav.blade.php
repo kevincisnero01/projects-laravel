@@ -49,8 +49,6 @@
 						
 						<a class="dropdown-item" href="{{  route('users.index') }}">Usuarios</a>
 
-						<a class="dropdown-item" href="#">Configuraciones</a>
-
 						<div class="dropdown-divider"></div>
 
 						<a class="dropdown-item" class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Cerrar sesion	</a>

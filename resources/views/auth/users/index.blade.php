@@ -6,35 +6,41 @@
 	<div class="d-flex justify-content-between align-items-center mb-3">
 		<h1 class="display-4">Usuarios</h1>
 		@auth
-		<a class="btn btn-brand" href="{{ route('projects.create') }}">Crear Usuario</a>
+		<a class="btn btn-brand" href="#">Crear Usuario</a>
 		@endauth
 	</div>
 
 	<p class="lead text-secondary text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua.</p>
-
-	<ul class="list-group">
-			<li class="list-group-item border-0 mb-3 shadow-sm">
-				<a class="d-flex justify-content-between align-items-center text-secondary" href="#">
-					<span class="font-weight-bold"> N°</span>
-					<span class="font-weight-bold"> Nombre </span>
-					<span class="font-weight-bold"> Correo </span>
-					<span class="font-weight-bold"> Fecha </span>
-				</a>
-			</li>
-		@forelse($users as $user)
-			<li class="list-group-item border-0 mb-3 shadow-sm">
-				<a class="d-flex justify-content-between align-items-center text-secondary" href="{{ route('projects.show', $user) }}">
-					<span class="text-black-50"> {{ $user->id }} </span>
-					<span class="text-black-50"> {{ $user->name }} </span>
-					<span class="text-black-50"> {{ $user->email }} </span>
-					<span class="text-black-50"> {{ $user->created_at->format('d-m-Y') }} </span>
-				</a>
-			</li>
-		@empty
-			<li class="list-group-item border-0 mb-3 shadow-sm"> No hay elementos</li>
-		@endforelse
-
-	</ul>
+	
+	<table class="table table-hover table-light table-responsive-lg"> 
+		<thead  class="text-secondary"> 
+			<tr class=" shadow-sm"> 
+				<th class="text-center">N°</th>
+				<th>Nombre</th>
+				<th>Correo</th>
+				<th>Registro</th>
+				<th>Opciones</th>
+			</tr>
+		</thead>
+		<tbody> 
+			@forelse($users as $user)
+			<tr class="text-black-50 shadow-sm"> 
+				<td class="text-center">{{ $user->id }}</td>
+				<td>{{ $user->name }}</td>
+				<td>{{ $user->email }}</td>
+				<td>{{ $user->created_at->diffForHumans() }}</td>
+				<td>
+					<a href="#" class="btn btn-sm">A</a>
+					<a href="#" class="btn btn-sm">B</a>
+				</td>
+			</tr>
+			@empty
+			<tr class="text-black-50 shadow-sm"> 
+				<td class="text-center text-danger" colspan="5">No hay elementos</td>
+			</tr>
+			@endforelse
+		</tbody>
+	</table>
 </div><!--container-->
 @endsection
