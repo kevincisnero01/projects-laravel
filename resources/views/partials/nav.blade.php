@@ -33,7 +33,7 @@
 			<ul class="nav navbar-nav">
 				@guest
 					<li class="nav-item">
-						<a class="nav-link" href="{{ route('login') }}">Login</a>
+						<a class="nav-link" href="{{ route('login') }}">Iniciar Sesion</a>
 					</li>
 				@endguest
 				@auth
@@ -47,7 +47,7 @@
 
 						<a class="dropdown-item" href="#">Perfil</a>
 						
-						<a class="dropdown-item" href="#">Usuarios</a>
+						<a class="dropdown-item" href="{{  route('users.index') }}">Usuarios</a>
 
 						<a class="dropdown-item" href="#">Configuraciones</a>
 
