@@ -30,7 +30,6 @@ class UserController extends Controller
 
     public function profile_update(Request $request)
     {   
-
         $user = User::find($request->id);
 
         if(!empty($request->name) && $user->name != $request->name){
@@ -48,6 +47,35 @@ class UserController extends Controller
         $user->save();
 
         return redirect()->route('users.profile')->with('status','Informacion actualizada...');
+    }
+
+    public function register(Request $request)
+    {
+        $rules = [
+            'name' => 'required|max:50',
+            'email' => 'required|email|max:50|unique:users',
+            'password' => 'required|min:4|confirmed'
+        ];
+        $this->validate($request, $rules);
+
+        User::create($request->all());
+
+        return redirect()->route('users.index')->with('status','Usuario creado con exito');
+    }
+
+    public function update(User $user, Request $request)
+    {
+        $rules = [
+            'name' => 'required|max:50',
+            'email' => 'required|email|max:50|unique:users',
+        ];
+        $this->validate($request, $rules);
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->save();
+
+        return redirect()->route('users.index')->with('status','Usuario actualizado con exito');
     }
 
 }

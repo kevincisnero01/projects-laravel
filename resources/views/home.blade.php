@@ -13,7 +13,7 @@
 		<a class="btn btn-lg btn-block btn-outline-brand">Proyectos</a>
 	</div><!--.col-12-->
 	<div class="col-12 col-sm-5 col-lg-6 mx-auto">
-		<img class="img-fluid mb-4" src="/img/home.png" alt="Desarrollo Web">
+		<img class="img-fluid mb-4" src="{{ asset('img/home.png') }}" alt="Desarrollo Web">
 	</div><!--.col-12-->
 </div><!--.row-->
 </div><!--.container-->

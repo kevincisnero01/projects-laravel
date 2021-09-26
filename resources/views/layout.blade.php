@@ -5,13 +5,13 @@
 	<title>@yield('title','App')</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- ===== APLICACION ===== -->
-	<link rel="stylesheet" type="text/css" href="/css/app.css">
-	<script type="text/javascript" src="/js/app.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
+	<script type="text/javascript" src="{{ asset('js/app.js') }}" defer></script>
 
 	<!-- ===== PLUGINS ===== -->
-	<link rel="stylesheet" type="text/css" href="/plugins/bootstrap-4.6.0/css/bootstrap.css">
-	<script type="text/javascript" src="/plugins/jquery-3.3.1/jquery.js" defer></script>
-	<script type="text/javascript" src="/plugins/bootstrap-4.6.0/js/bootstrap.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/bootstrap-4.6.0/css/bootstrap.css') }}">
+	<script type="text/javascript" src="{{ asset('plugins/jquery-3.3.1/jquery.js') }}" defer></script>
+	<script type="text/javascript" src="{{ asset('plugins/bootstrap-4.6.0/js/bootstrap.js') }}" defer></script>
 
 </head>
 <body>

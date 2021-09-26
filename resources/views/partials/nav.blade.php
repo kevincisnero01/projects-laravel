@@ -39,7 +39,7 @@
 				@auth
 				<li class="nav-item dropdown ">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<img class="rounded-circle mr-2" src="/img/profile.png" width="30" height="30" alt="profile">
+						<img class="rounded-circle mr-2" src="{{ asset('img/profile.png') }}" width="30" height="30" alt="profile">
 						{{ Auth::user()->name}}
 					</a>
 

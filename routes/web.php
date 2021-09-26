@@ -20,3 +20,5 @@ Route::get('usuario/perfil', [UserController::class,'profile'])->name('users.pro
 Route::put('usuario/perfil', [UserController::class,'profile_update'])->name('users.profile.update');
 
 Route::get('usuario', [UserController::class,'index'])->name('users.index');
+Route::post('usuario/registro', [UserController::class,'register'])->name('users.register');
+Route::put('usuario/update/{user}', [UserController::class,'update'])->name('users.update');

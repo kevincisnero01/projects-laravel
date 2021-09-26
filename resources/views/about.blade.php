@@ -4,7 +4,7 @@
 <div class="container">
 <div class="row">
 	<div class="col-12 col-sm-5 col-lg-6 mx-auto">
-		<img class="img-fluid mb-4" src="/img/about.png" alt="Desarrollo Web">
+		<img class="img-fluid mb-4" src="{{ asset('img/about.png') }}" alt="Desarrollo Web">
 	</div><!--.col-12-->
 	<div class="col-12 col-sm-7 col-lg-6 mx-auto">
 		<h1 class="display-4 text-brand">Quien soy</h1>
