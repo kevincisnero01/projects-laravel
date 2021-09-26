@@ -10,7 +10,10 @@
     "Email":"Correo",
     "Subject":"Asunto",
     "Message":"Mensaje",
-    
+    "root":"Desarrollador",
+    "admin":"Administrador",
+    "user":"Usuario",
+
     "30 Days": "30 Días",
     "60 Days": "60 Días",
     "90 Days": "90 Días",

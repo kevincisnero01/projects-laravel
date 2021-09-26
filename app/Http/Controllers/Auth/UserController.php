@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    public function index(User $users)
+    public function index()
     {
         return view('auth.users.index', [
-            'users' => $users->all()
+            'users' => User::orderByDesc('status')->paginate(5)
         ]);
     }
 
@@ -78,4 +78,9 @@ class UserController extends Controller
         return redirect()->route('users.index')->with('status','Usuario actualizado con exito');
     }
 
+    public function delete(User $user)
+    {
+        $user->delete();
+        return redirect()->route('users.index')->with('status','Usuario eliminado con exito');
+    }
 }

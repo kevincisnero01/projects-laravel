@@ -57,8 +57,24 @@
     </div><!--.modal-dialog-->
 </div><!--.modal-->
 
-<script type="text/javascript">
-	window.onload = function(){
 
-	}
-</script>
+<div class="modal fade" id="modalDeletetForm{{  $user->id }}">
+	<div class="modal-dialog">
+        <div class="modal-content">
+          <!-- cuerpo del diálogo -->
+          <div class="modal-body">
+				    <form method="POST" id="deleteForm{{  $user->id }}" action="{{ route('users.delete', $user) }}">
+				        @csrf
+				        @method('delete')
+				        <h4>¿Estas seguro que deseas eliminar el usuario?</h3>
+				    </form>
+          </div><!--.modal-body-->
+          <!-- pie del diálogo -->
+          <div class="modal-footer">
+          	<button type="submit" form="deleteForm{{  $user->id }}" class="btn btn-danger" >Eliminar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          </div>
+
+        </div><!--.modal-content-->
+    </div><!--.modal-dialog-->
+</div><!--.modal-->

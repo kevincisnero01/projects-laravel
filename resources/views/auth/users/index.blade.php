@@ -19,6 +19,8 @@
 				<th class="text-center">N°</th>
 				<th>Nombre</th>
 				<th>Correo</th>
+				<th>Tipo</th>
+				<th>Estatus</th>
 				<th>Registro</th>
 				<th>Opciones</th>
 			</tr>
@@ -29,10 +31,12 @@
 				<td class="text-center">{{ $user->id }}</td>
 				<td>{{ $user->name }}</td>
 				<td>{{ $user->email }}</td>
+				<td>{{ __($user->type) }}</td>
+				<td> @if($user->status == 1) Activo @else Inactivo @endif</td>
 				<td>{{ $user->created_at->diffForHumans() }}</td>
 				<td>
 					<button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modalEditForm{{  $user->id }}">Editar</button>
-					<a href="#" class="btn btn-sm">B</a>
+					<button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalDeletetForm{{  $user->id }}">Eliminar</button>
 				</td>
 			</tr>
 
@@ -45,6 +49,7 @@
 			@endforelse
 		</tbody>
 	</table>
+	{{ $users->links() }}
 </div><!--container-->
 
 

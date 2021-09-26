@@ -46,8 +46,10 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
 						<a class="dropdown-item" href="{{ route('users.profile') }}">Perfil</a>
-						
-						<a class="dropdown-item" href="{{  route('users.index') }}">Usuarios</a>
+
+						@if(Auth::user()->type == 'root' || Auth::user()->type == 'admin')
+							<a class="dropdown-item" href="{{  route('users.index') }}">Usuarios</a>
+						@endif
 
 						<div class="dropdown-divider"></div>
 

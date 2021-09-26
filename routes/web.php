@@ -22,3 +22,4 @@ Route::put('usuario/perfil', [UserController::class,'profile_update'])->name('us
 Route::get('usuario', [UserController::class,'index'])->name('users.index');
 Route::post('usuario/registro', [UserController::class,'register'])->name('users.register');
 Route::put('usuario/update/{user}', [UserController::class,'update'])->name('users.update');
+Route::delete('usuario/dalete/{user}', [UserController::class,'delete'])->name('users.delete');

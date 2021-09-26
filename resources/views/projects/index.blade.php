@@ -24,7 +24,7 @@
 		@empty
 			<li class="list-group-item border-0 mb-3 shadow-sm"> No hay elementos</li>
 		@endforelse
-
 	</ul>
+	{{ $projects->links() }}
 </div><!--container-->
 @endsection
