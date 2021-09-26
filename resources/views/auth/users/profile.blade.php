@@ -5,7 +5,10 @@
 <div class="col-12 col-md-8 col-lg-6 mx-auto">
 
 
-    <form class="bg-white p-3 shadow rounded" method="POST" action="#">
+    <form class="bg-white p-3 shadow rounded" method="POST" action="{{ route('users.profile.update') }}">
+        @csrf
+        @method('put')
+        <input type="hidden" name="id" value="{{ Auth::user()->id }}">
 
         <h1 class="display-4">Perfil</h1>
         <hr>

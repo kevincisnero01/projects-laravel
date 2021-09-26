@@ -16,5 +16,7 @@ Route::view('/contacto', 'contact')->name('contact');
 Route::post('/contacto', [ContactController::class,'store'])->name('contact.store');
 
 Auth::routes();
-Route::get('usuario', [UserController::class,'index'])->name('users.index');
 Route::get('usuario/perfil', [UserController::class,'profile'])->name('users.profile');
+Route::put('usuario/perfil', [UserController::class,'profile_update'])->name('users.profile.update');
+
+Route::get('usuario', [UserController::class,'index'])->name('users.index');
