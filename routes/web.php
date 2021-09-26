@@ -16,4 +16,5 @@ Route::view('/contacto', 'contact')->name('contact');
 Route::post('/contacto', [ContactController::class,'store'])->name('contact.store');
 
 Auth::routes();
-Route::get('users', [UserController::class,'index'])->name('users.index');
+Route::get('usuario', [UserController::class,'index'])->name('users.index');
+Route::get('usuario/perfil', [UserController::class,'profile'])->name('users.profile');

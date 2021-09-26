@@ -9,10 +9,23 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    public function index(User $user)
+    public function index(User $users)
     {
         return view('auth.users.index', [
-            'users' => $user->all()
+            'users' => $users->all()
         ]);
     }
+
+    public function show(User $user)
+    {
+        return view('auth.users.show', [
+            'user' => $user
+        ]);
+    }
+
+    public function profile()
+    {   
+        return view('auth.users.profile');
+    }
+
 }
