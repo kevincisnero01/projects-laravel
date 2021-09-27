@@ -15,7 +15,9 @@
 		</button>
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
 			<ul class="nav nav-pills nav-brand mr-auto">
+
 				<li class="nav-item" >
 					<a class="nav-link {{ setActive('home') }}" href="{{ route('home') }}" > @lang('Home') </a>
 				</li>
