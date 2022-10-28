@@ -22,8 +22,11 @@ class ProjectSeeder extends Seeder
             DB::table('projects')->insert([
             'title' => $tecnologias[$i],
             'url' => $tecnologias[$i],
-            'description' => 'descripcion del proyecto con la tecnologia de '.$tecnologias[$i]
-            ]);
+            'description' => 'descripcion del proyecto con la tecnologia de '.$tecnologias[$i],
+            'user_id' => rand(1,3),
+            'companies_id' => rand(1,10),
+            'city_id' => rand(1,10),
+        ]);
 
         }
 
